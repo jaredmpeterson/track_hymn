@@ -11,27 +11,35 @@
     <title>Track Hymn</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/static/bower_components/bootstrap-css/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/bower_components/bootstrap-css/css/bootstrap.min.css?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/css/bootstrap.min.css')}'"
+          rel="stylesheet">
 
     <!-- Custom styles for this scaffold -->
-    <link href="${request.static_url('track_hymn:static/css/theme.css')}" rel="stylesheet">
+    <link href="/static/css/theme.css?cacheId=${view.build_cache_id('/static/css/theme.css')}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="/static/bower_components/html5shiv/dist/html5shiv.min.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
-      <script src="/static/bower_components/respond/dest/respond.min.js" integrity="sha384-f1r2UzjsxZ9T4V1f2zBO/evUqSEOpeaUUZcMTz1Up63bl4ruYnFYeM+BxI4NhyI0" crossorigin="anonymous"></script>
+    <script src="/static/bower_components/html5shiv/dist/html5shiv.min.js?cacheId=${view.build_cache_id('/static/bower_components/html5shiv/dist/html5shiv.min.js')}"></script>
+    <script src="/static/bower_components/respond/dest/respond.min.js?cacheId=${view.build_cache_id('/static/bower_components/respond/dest/respond.min.js')}"></script>
     <![endif]-->
   </head>
 
   <body>
+  <!--?<div class="nav">-->
+    <!--?<div class="account-nav">-->
+        <!--?<a href="/account/register">Register</a>-->
+    <!--?</div>-->
+
+    <!--?<a href="/home/index">home</a> |-->
+    <!--?<a href="/albums">albums</a> |-->
+    <!--?<a href="/home/contact">contact</a> |-->
+    <!--?<a href="/home/about">about</a>-->
+<!--?</div>-->
 
     <div class="starter-template">
       <div class="container">
         <div class="row">
-          <div class="col-md-2">
-            <img class="logo img-responsive" src="${request.static_url('track_hymn:static/img/pyramid.png')}" alt="pyramid web framework">
-          </div>
-          <div class="col-md-10">
+          <div class="col-md-12">
             <div metal:define-slot="content">No content</div>
           </div>
         </div>
@@ -55,7 +63,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/static/bower_components/jquery/dist/jquery.min.js" integrity="sha384-aBL3Lzi6c9LNDGvpHkZrrm3ZVsIwohDD7CDozL0pk8FwCrfmV7H9w8j3L7ikEv6h" crossorigin="anonymous"></script>
-    <script src="/static/bower_components/bootstrap-css/js/bootstrap.min.js" integrity="sha384-s1ITto93iSMDxlp/79qhWHi+LsIi9Gx6yL+cOKDuymvihkfol83TYbLbOw+W/wv4" crossorigin="anonymous"></script>
+    <script src="/static/bower_components/jquery/dist/jquery.min.js?cacheId=${view.build_cache_id('/static/bower_components/jquery/dist/jquery.min.js')}"></script>
+    <script src="/static/bower_components/bootstrap-css/js/bootstrap.min.js?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/js/bootstrap.min.js')}"></script>
   </body>
 </html>
