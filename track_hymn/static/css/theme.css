@@ -1,9 +1,15 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+
+:root {
+  --green: #5C8050;
+  --gold: #FECB2F;
+}
+
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: #ffffff;
-  background: #bc2131;
+  background: var(--green);
 }
 h1,
 h2,
