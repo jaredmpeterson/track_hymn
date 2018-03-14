@@ -1,0 +1,25 @@
+{
+  "name": "track_hymn",
+  "authors": [
+    "Jared M. Peterson <developer@peteyinc.com>"
+  ],
+  "description": "Tracker for which LDS Hymns are sung each week.",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "track_hymn/static/bower_components"
+  ],
+  "dependencies": {
+    "bootstrap-css": "^3.3.7",
+    "jquery": "^3.3.1",
+    "html5shiv": "^3.7.3",
+    "font-awesome": "^5.0.8",
+    "respond": "^1.4.2"
+  }
+}
