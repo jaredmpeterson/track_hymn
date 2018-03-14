@@ -1,0 +1,3 @@
+[run]
+source = track_hymn
+omit = track_hymn/test*
