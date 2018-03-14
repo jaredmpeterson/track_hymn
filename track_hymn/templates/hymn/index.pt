@@ -1,0 +1,12 @@
+<div metal:use-macro="load: ../layout.pt">
+    <div metal:fill-slot="content">
+
+        <div class="hymns">
+            <h1>Hymns</h1>
+            <div tal:repeat="h hymns">
+                <h2>${h.title}</h2>
+            </div>
+        </div>
+
+    </div>
+</div>

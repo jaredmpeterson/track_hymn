@@ -1,5 +1,6 @@
 import pyramid_handlers
 from track_hymn.controllers.base_controller import BaseController
+from track_hymn.infrastructure.suppressor import suppress
 
 
 class HomeController(BaseController):
@@ -18,3 +19,7 @@ class HomeController(BaseController):
         return {
             'value': 'CONTACT'
         }
+
+    @suppress
+    def testing(self):
+        print("testing")

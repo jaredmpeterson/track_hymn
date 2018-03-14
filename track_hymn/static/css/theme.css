@@ -75,11 +75,11 @@ p {
   margin-right: 0;
 }
 .starter-template .links ul li.current-version {
-  color: #f2b7bd;
+  color: var(--gold);
   font-weight: 400;
 }
 .starter-template .links ul li a, a {
-  color: #f2b7bd;
+  color: var(--gold);
   text-decoration: underline;
 }
 .starter-template .links ul li a:hover, a:hover {
@@ -87,7 +87,7 @@ p {
   text-decoration: underline;
 }
 .starter-template .links ul li .icon-muted {
-  color: #eb8b95;
+  color: var(--gold);
   margin-right: 5px;
 }
 .starter-template .links ul li:hover .icon-muted {
@@ -96,7 +96,7 @@ p {
 .starter-template .copyright {
   margin-top: 10px;
   font-size: 0.9em;
-  color: #f2b7bd;
+  color: var(--gold);
   text-transform: lowercase;
   float: right;
   right: 0;

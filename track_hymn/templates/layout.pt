@@ -1,69 +1,79 @@
 <!DOCTYPE html metal:define-macro="layout">
 <html lang="{{request.locale_name}}">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="pyramid web application">
-    <meta name="author" content="Pylons Project">
-    <link rel="shortcut icon" href="${request.static_url('track_hymn:static/img/pyramid-16x16.png')}">
 
-    <title>Track Hymn</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="pyramid web application">
+  <meta name="author" content="Pylons Project">
+  <link rel="shortcut icon" href="${request.static_url('track_hymn:static/img/pyramid-16x16.png')}">
 
-    <!-- Bootstrap core CSS -->
-    <link href="/static/bower_components/bootstrap-css/css/bootstrap.min.css?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/css/bootstrap.min.css')}'"
-          rel="stylesheet">
+  <title>Track Hymn</title>
 
-    <!-- Custom styles for this scaffold -->
-    <link href="/static/css/theme.css?cacheId=${view.build_cache_id('/static/css/theme.css')}" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="/static/bower_components/bootstrap-css/css/bootstrap.min.css?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/css/bootstrap.min.css')}'"
+    rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+  <!-- Custom styles for this scaffold -->
+  <link href="/static/css/theme.css?cacheId=${view.build_cache_id('/static/css/theme.css')}" rel="stylesheet">
+  <link href="/static/css/site.css?cacheId=${view.build_cache_id('/static/css/site.css')}" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
     <script src="/static/bower_components/html5shiv/dist/html5shiv.min.js?cacheId=${view.build_cache_id('/static/bower_components/html5shiv/dist/html5shiv.min.js')}"></script>
     <script src="/static/bower_components/respond/dest/respond.min.js?cacheId=${view.build_cache_id('/static/bower_components/respond/dest/respond.min.js')}"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
-  <!--?<div class="nav">-->
-    <!--?<div class="account-nav">-->
-        <!--?<a href="/account/register">Register</a>-->
-    <!--?</div>-->
+<body>
+  <header>
+    <nav>
+      <a href="/home/index">home</a> |
+      <a href="/hymn">hymns</a> |
+      <a href="/home/contact">contact</a> |
+      <!--?<a href="/home/about">about</a>-->
+      <div class="account-nav">
+        <a href="#" tal:condition="not view.is_logged_in">Register</a>
+      </div>
+    </nav>
+  </header>
 
-    <!--?<a href="/home/index">home</a> |-->
-    <!--?<a href="/albums">albums</a> |-->
-    <!--?<a href="/home/contact">contact</a> |-->
-    <!--?<a href="/home/about">about</a>-->
-<!--?</div>-->
-
-    <div class="starter-template">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div metal:define-slot="content">No content</div>
-          </div>
+  <div class="starter-template">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div metal:define-slot="content">No content</div>
         </div>
-        <div class="row">
-          <div class="links">
-            <ul>
-              <li><i class="glyphicon glyphicon-cog icon-muted"></i><a href="https://github.com/jaredmpeterson">Github</a></li>
-              <li><i class="glyphicon glyphicon-home icon-muted"></i><a href="https://pylonsproject.org">Pylons Project</a></li>
-            </ul>
-          </div>
+      </div>
+      <div class="row">
+        <div class="links">
+          <ul>
+            <li>
+              <i class="glyphicon glyphicon-cog icon-muted"></i>
+              <a href="https://github.com/jaredmpeterson">Github</a>
+            </li>
+            <li>
+              <i class="glyphicon glyphicon-home icon-muted"></i>
+              <a href="https://pylonsproject.org">Pylons Project</a>
+            </li>
+          </ul>
         </div>
-        <div class="row">
-          <div class="copyright">
-            Copyright &copy; Jared M. Peterson
-          </div>
+      </div>
+      <div class="row">
+        <div class="copyright">
+          Copyright &copy; Jared M. Peterson
         </div>
       </div>
     </div>
+  </div>
 
 
-    <!-- Bootstrap core JavaScript
+  <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/static/bower_components/jquery/dist/jquery.min.js?cacheId=${view.build_cache_id('/static/bower_components/jquery/dist/jquery.min.js')}"></script>
-    <script src="/static/bower_components/bootstrap-css/js/bootstrap.min.js?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/js/bootstrap.min.js')}"></script>
-  </body>
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/static/bower_components/jquery/dist/jquery.min.js?cacheId=${view.build_cache_id('/static/bower_components/jquery/dist/jquery.min.js')}"></script>
+  <script src="/static/bower_components/bootstrap-css/js/bootstrap.min.js?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/js/bootstrap.min.js')}"></script>
+</body>
+
 </html>
