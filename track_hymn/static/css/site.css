@@ -3,3 +3,8 @@
 .hymns h2 {
     color: var(--gold);
 }
+
+.hymn-form input {
+    margin: 10px;
+    /*text-align: left;*/
+}

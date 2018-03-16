@@ -27,17 +27,18 @@
 </head>
 
 <body>
-  <header>
+
+<header>
     <nav>
-      <a href="/home/index">home</a> |
-      <a href="/hymn">hymns</a> |
-      <a href="/home/contact">contact</a> |
-      <!--?<a href="/home/about">about</a>-->
-      <div class="account-nav">
-        <a href="#" tal:condition="not view.is_logged_in">Register</a>
-      </div>
+        <a href="/home/index">home</a> |
+        <a href="/hymn">hymns</a> |
+        <a href="/home/contact">contact</a> |
+        <!--?<a href="/home/about">about</a>-->
+        <div class="account-nav">
+            <a href="/account/register" tal:condition="not view.is_logged_in">Register</a>
+        </div>
     </nav>
-  </header>
+</header>
 
   <div class="starter-template">
     <div class="container">

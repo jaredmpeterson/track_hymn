@@ -1,6 +1,7 @@
 from pyramid.config import Configurator
 import track_hymn.controllers.home_controller as home
 import track_hymn.controllers.hymn_controller as hymn
+import track_hymn.controllers.account_controller as acct
 
 
 def main(global_config, **settings):
@@ -22,6 +23,7 @@ def init_routing(config):
     config.add_handler('root', '/', handler=home.HomeController, action='index')
     add_controller_routes(config, home.HomeController, 'home')
     add_controller_routes(config, hymn.HymnController, 'hymn')
+    add_controller_routes(config, acct.AccountController, 'account')
     config.scan()
 
 
