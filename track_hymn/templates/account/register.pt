@@ -4,9 +4,9 @@
             <h1>Create an account</h1>
             <div tal:condition="error">${error}</div>
             <form action="" method="POST">
-                <input type="text" name="email" value="${email}" placeholder="email address"><br>
-                <input type="password" name="password" value="${password}" placeholder="password"><br>
-                <input type="password" name="confirm_password" value="${confirm_password}"
+                <input type="email" name="email" required value="${email}" placeholder="email address"><br>
+                <input type="password" name="password" required value="${password}" placeholder="password"><br>
+                <input type="password" name="confirm_password" required value="${confirm_password}"
                        placeholder="confirm password"><br>
                 <button type="submit">Submit</button>
             </form>
