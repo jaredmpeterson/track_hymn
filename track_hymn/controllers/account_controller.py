@@ -1,6 +1,7 @@
 import pyramid_handlers
 
 from track_hymn.controllers.base_controller import BaseController
+from track_hymn.viewmodels.register_viewmodel import RegisterViewModel
 
 
 class AccountController(BaseController):
@@ -18,31 +19,22 @@ class AccountController(BaseController):
                              name='register')
     def register(self):
         print("Calling Register via GET")
-        return {
-            'email': None,
-            'password': None,
-            'confirm_password': None,
-            'error': None
-        }
+        vm = RegisterViewModel()
+        return vm.to_dict()
 
     # TODO: POST account/register
     @pyramid_handlers.action(renderer='templates/account/register.pt',
                              request_method='POST',
                              name='register')
     def register_post(self):
-        email = self.request.POST.get('email')
-        password = self.request.POST.get('password')
-        pw_confirm = self.request.POST.get('confirm_password')
-        print("Calling Register via POST: {} {} {}".format(email, password, pw_confirm))
+        vm = RegisterViewModel()
+        vm.from_dict(self.request.POST)
 
         # TODO: validate no account, password match
-        if password != pw_confirm:
-            return {
-                'email': email,
-                'password': password,
-                'confirm_password': pw_confirm,
-                'error': "Passwords don't match."
-            }
+        vm.validate()
+        if vm.error:
+            return vm.to_dict()
+
         # TODO: create account
 
         # TODO: redirect
