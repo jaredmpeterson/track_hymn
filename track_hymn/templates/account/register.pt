@@ -4,8 +4,11 @@
             <h1>Create an account</h1>
             <div tal:condition="error">${error}</div>
             <form action="" method="POST">
-                <input type="email" name="email" required value="${email}" placeholder="email address"><br>
-                <input type="password" name="password" required value="${password}" placeholder="password"><br>
+                <input type="text" name="username" required value="${username}" placeholder="Username"><br>
+                <input type="text" name="stake" required value="${stake}" placeholder="Stake"><br>
+                <input type="text" name="ward" required value="${ward}" placeholder="Ward"><br>
+                <input type="text" name="zip" pattern="[0-9]{5}" required value="${zip}" placeholder="ZIP Code"><br>
+                <input type="password" name="password" required value="${password}" placeholder="Password"><br>
                 <input type="password" name="confirm_password" required value="${confirm_password}"
                        placeholder="confirm password"><br>
                 <button type="submit">Submit</button>
