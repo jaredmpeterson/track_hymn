@@ -1,7 +1,11 @@
+import os
 from pyramid.config import Configurator
+
+import track_hymn
 import track_hymn.controllers.home_controller as home
 import track_hymn.controllers.hymn_controller as hymn
 import track_hymn.controllers.account_controller as acct
+from track_hymn.data.dbsession import DBSessionFactory
 
 
 def main(global_config, **settings):
@@ -11,7 +15,7 @@ def main(global_config, **settings):
 
     init_includes(config)
     init_routing(config)
-
+    init_database(config)
     return config.make_wsgi_app()
 
 
@@ -38,3 +42,10 @@ def add_controller_routes(config, ctrl, prefix):
 def init_includes(config):
     config.include('pyramid_chameleon')
     config.include('pyramid_handlers')
+
+
+def init_database(config):
+    top_folder = os.path.dirname(track_hymn.__file__)
+    rel_folder = os.path.join('db', 'track_hymn.sqlite')
+    db_file = os.path.join(top_folder, rel_folder)
+    DBSessionFactory.global_init(db_file)

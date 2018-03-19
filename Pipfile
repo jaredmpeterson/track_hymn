@@ -9,6 +9,7 @@ name = "pypi"
 
 requests = "*"
 pyramid-handlers = "*"
+sqlalchemy = "*"
 
 
 [dev-packages]
