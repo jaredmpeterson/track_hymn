@@ -20,3 +20,4 @@ Data.fs*
 coverage
 test
 track_hymn/static/bower_components/
+.idea/
