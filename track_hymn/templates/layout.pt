@@ -34,20 +34,33 @@
         <a href="/hymn">hymns</a> |
         <a href="/home/contact">contact</a> |
         <!--?<a href="/home/about">about</a>-->
-        <div class="account-nav">
-            <a href="/account/register" tal:condition="not view.is_logged_in">Register</a>
-        </div>
+        <ul class="account-nav">
+            <li tal:condition="not view.is_logged_in">
+                <a href="/account/signin">sign in</a>
+            </li>
+            <li tal:condition="not view.is_logged_in">
+                <a href="/account/register">register</a>
+            </li>
+            <li tal:condition="view.is_logged_in">
+                <a href="/account">account</a>
+            </li>
+            <li tal:condition="view.is_logged_in">
+                <a href="/account/logout">logout</a>
+            </li>
+        </ul>
     </nav>
 </header>
 
   <div class="starter-template">
     <div class="container">
-      <div class="row">
+
+        <div class="row">
         <div class="col-md-12">
           <div metal:define-slot="content">No content</div>
         </div>
       </div>
-      <div class="row">
+
+        <div class="row">
         <div class="links">
           <ul>
             <li>
@@ -61,11 +74,13 @@
           </ul>
         </div>
       </div>
-      <div class="row">
+
+        <div class="row">
         <div class="copyright">
           Copyright &copy; Jared M. Peterson
         </div>
       </div>
+
     </div>
   </div>
 

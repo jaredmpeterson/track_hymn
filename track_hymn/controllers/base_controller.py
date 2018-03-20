@@ -4,6 +4,7 @@ import pyramid.httpexceptions as exc
 import track_hymn.infrastructure.cookie_auth as cookie_auth
 
 # import pyramid.renderers
+from track_hymn.services.account_service import AccountService
 
 
 class BaseController:
@@ -17,11 +18,7 @@ class BaseController:
 
     @property
     def is_logged_in(self):
-        return False
-
-    @suppress
-    def testing_base(self):
-        print("testing base controller")
+        return cookie_auth.get_user_id_via_cookie(self.request) is not None
 
     def redirect(self, to_url, permanent=False):
         if permanent:
@@ -31,3 +28,12 @@ class BaseController:
     @property
     def auth_user_id(self):
         return cookie_auth.get_user_id_via_cookie(self.request)
+
+    @property
+    def current_user(self):
+        uid = cookie_auth.get_user_id_via_cookie(self.request)
+        if not uid:
+            return None
+
+        user = AccountService.find_userid(uid)
+        return user

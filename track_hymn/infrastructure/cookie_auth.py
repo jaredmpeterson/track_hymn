@@ -38,3 +38,11 @@ def get_user_id_via_cookie(request):
         return None
 
     return user_id
+
+
+def logout(request):
+    request.add_response_callback(lambda req, resp: __delete_cookie_callback(resp, auth_cookie_name))
+
+
+def __delete_cookie_callback(response, name):
+    response.delete_cookie(name)

@@ -48,3 +48,14 @@ class AccountService:
             return None
 
         return user
+
+    @classmethod
+    def find_userid(cls, user_id):
+        if not user_id:
+            return None
+
+        session = DBSessionFactory.create_session()
+
+        user = session.query(User).filter(User.id == user_id).first()
+
+        return user
