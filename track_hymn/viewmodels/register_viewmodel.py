@@ -2,7 +2,7 @@ from track_hymn.viewmodels.viewmodelbase import ViewModelBase
 
 
 class RegisterViewModel(ViewModelBase):
-    def __init__(self):
+    def __init__(self) -> object:
         self.username = None
         self.stake = None
         self.ward = None

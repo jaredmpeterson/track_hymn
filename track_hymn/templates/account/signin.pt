@@ -1,9 +1,13 @@
 <div metal:use-macro="load: ../layout.pt">
     <div metal:fill-slot="content">
-
         <div class="">
-            <h1>Sign In</h1>
+            <h2>Sign In</h2>
+            <div tal:condition="error">${error}</div>
+            <form action="" method="POST">
+                <input type="text" name="username" required value="${username}" placeholder="Username"><br>
+                <input type="password" name="password" required value="${password}" placeholder="Password"><br>
+                <button type="submit">Submit</button>
+            </form>
         </div>
-
     </div>
 </div>

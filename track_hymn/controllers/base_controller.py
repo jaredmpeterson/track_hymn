@@ -1,7 +1,7 @@
 import track_hymn.infrastructure.static_cache as static_cache
 from track_hymn.infrastructure.suppressor import suppress
 import pyramid.httpexceptions as exc
-
+import track_hymn.infrastructure.cookie_auth as cookie_auth
 
 # import pyramid.renderers
 
@@ -27,3 +27,7 @@ class BaseController:
         if permanent:
             raise exc.HTTPMovedPermanently(to_url)
         raise exc.HTTPFound(to_url)
+
+    @property
+    def auth_user_id(self):
+        return cookie_auth.get_user_id_via_cookie(self.request)

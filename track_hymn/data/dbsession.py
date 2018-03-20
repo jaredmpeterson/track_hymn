@@ -1,6 +1,7 @@
 from track_hymn.data.modelbase import SABase
 import sqlalchemy
 import sqlalchemy.orm as orm
+
 import track_hymn.data.user
 import track_hymn.data.ward
 import track_hymn.data.stake
@@ -20,7 +21,7 @@ class DBSessionFactory:
 
         conn_str = 'sqlite:///' + db_file
         print("Connecting to db with: {}".format(conn_str))
-        engine = sqlalchemy.create_engine(conn_str, echo=True)
+        engine = sqlalchemy.create_engine(conn_str, echo=False)
         SABase.metadata.create_all(engine)
         DBSessionFactory.factory = orm.sessionmaker(bind=engine)
 

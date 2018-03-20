@@ -10,6 +10,7 @@ name = "pypi"
 requests = "*"
 pyramid-handlers = "*"
 sqlalchemy = "*"
+passlib = "*"
 
 
 [dev-packages]

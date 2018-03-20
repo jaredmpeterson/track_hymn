@@ -1,15 +1,17 @@
 import datetime
-import sqlalchemy as sa
+import uuid
+from sqlalchemy import Column, String, Boolean, DateTime, Integer
 
 from track_hymn.data.modelbase import SABase
 
 
 class User(SABase):
     __tablename__ = 'User'
-    id = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
-    username = sa.Column(sa.String, unique=True)
-    stake = sa.Column(sa.String)
-    ward = sa.Column(sa.String)
-    zip = sa.Column(sa.Integer)
-    created = sa.Column(sa.DateTime, default=datetime.datetime.now, index=True)
-    is_admin = sa.Column(sa.Boolean, default=False)
+    id = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()).replace('-', ''))
+    username = Column(String, unique=True, index=True)
+    password_hash = Column(String)
+    stake = Column(String)
+    ward = Column(String)
+    zip = Column(Integer)
+    created = Column(DateTime, default=datetime.datetime.now, index=True)
+    is_admin = Column(Boolean, default=False, nullable=False)
