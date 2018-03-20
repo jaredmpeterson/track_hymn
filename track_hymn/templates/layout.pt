@@ -1,95 +1,109 @@
 <!DOCTYPE html metal:define-macro="layout">
-<html lang="{{request.locale_name}}">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="pyramid web application">
-  <meta name="author" content="Pylons Project">
-  <link rel="shortcut icon" href="${request.static_url('track_hymn:static/img/pyramid-16x16.png')}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pyramid web application">
+    <meta name="author" content="Pylons Project">
+    <link rel="shortcut icon" href="${request.static_url('track_hymn:static/img/pyramid-16x16.png')}">
 
-  <title>Track Hymn</title>
+    <title>Track Hymn</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="/static/bower_components/bootstrap-css/css/bootstrap.min.css?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/css/bootstrap.min.css')}'"
-    rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bower_components/bootstrap-css/css/bootstrap.min.css?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/css/bootstrap.min.css')}'"
+          rel="stylesheet">
 
-  <!-- Custom styles for this scaffold -->
-  <link href="/static/css/theme.css?cacheId=${view.build_cache_id('/static/css/theme.css')}" rel="stylesheet">
-  <link href="/static/css/site.css?cacheId=${view.build_cache_id('/static/css/site.css')}" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="/static/bower_components/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet"
+          type="text/css">
 
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
+    <!-- Custom styles for this scaffold -->
+    <link href="/static/css/theme.css?cacheId=${view.build_cache_id('/static/css/theme.css')}" rel="stylesheet">
+    <link href="/static/css/site.css?cacheId=${view.build_cache_id('/static/css/site.css')}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
     <script src="/static/bower_components/html5shiv/dist/html5shiv.min.js?cacheId=${view.build_cache_id('/static/bower_components/html5shiv/dist/html5shiv.min.js')}"></script>
     <script src="/static/bower_components/respond/dest/respond.min.js?cacheId=${view.build_cache_id('/static/bower_components/respond/dest/respond.min.js')}"></script>
     <![endif]-->
 </head>
 
 <body>
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container-fluid">
 
-<header>
-    <nav>
-        <a href="/home/index">home</a> |
-        <a href="/hymn">hymns</a> |
-        <a href="/home/contact">contact</a> |
-        <!--?<a href="/home/about">about</a>-->
-        <ul class="account-nav">
-            <li tal:condition="not view.is_logged_in">
-                <a href="/account/signin">sign in</a>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbarNav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Track Hymn</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item active">
+
+                    <a class="nav-link" href="/home/index">
+                        <i class="fas fa-home"></i>Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/hymn">Hymns</a>
+                </li>
+                <li class="nav-item" tal:condition="not view.is_logged_in">
+                    <a href="/account/signin">Sign In</a>
             </li>
-            <li tal:condition="not view.is_logged_in">
-                <a href="/account/register">register</a>
+                <li class="nav-item" tal:condition="not view.is_logged_in">
+                    <a href="/account/register">Register</a>
+                </li>
+                <li class="nav-item" tal:condition="view.is_logged_in">
+                    <a href="/account">Account</a>
+                </li>
+                <li class="nav-item" tal:condition="view.is_logged_in">
+                    <a href="/account/logout">Logout</a>
             </li>
-            <li tal:condition="view.is_logged_in">
-                <a href="/account">account</a>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="starter-template">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div metal:define-slot="content">No content</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="navbar navbar-fixed-bottom navbar-inverse">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="https://github.com/jaredmpeterson" class="navbar-link"><i class="fab fa-github"></i> Github</a>
             </li>
-            <li tal:condition="view.is_logged_in">
-                <a href="/account/logout">logout</a>
+            <li>
+                <a href="https://jaredmpeterson.github.io" class="navbar-link">&copy; Jared M. Peterson</a>
             </li>
         </ul>
-    </nav>
-</header>
-
-  <div class="starter-template">
-    <div class="container">
-
-        <div class="row">
-        <div class="col-md-12">
-          <div metal:define-slot="content">No content</div>
-        </div>
-      </div>
-
-        <div class="row">
-        <div class="links">
-          <ul>
-            <li>
-              <i class="glyphicon glyphicon-cog icon-muted"></i>
-              <a href="https://github.com/jaredmpeterson">Github</a>
-            </li>
-            <li>
-              <i class="glyphicon glyphicon-home icon-muted"></i>
-              <a href="https://pylonsproject.org">Pylons Project</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-        <div class="row">
-        <div class="copyright">
-          Copyright &copy; Jared M. Peterson
-        </div>
-      </div>
-
     </div>
-  </div>
+</footer>
 
 
-  <!-- Bootstrap core JavaScript
-    ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="/static/bower_components/jquery/dist/jquery.min.js?cacheId=${view.build_cache_id('/static/bower_components/jquery/dist/jquery.min.js')}"></script>
-  <script src="/static/bower_components/bootstrap-css/js/bootstrap.min.js?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/js/bootstrap.min.js')}"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/bower_components/jquery/dist/jquery.min.js?cacheId=${view.build_cache_id('/static/bower_components/jquery/dist/jquery.min.js')}"></script>
+<script src="/static/bower_components/bootstrap-css/js/bootstrap.min.js?cacheId=${view.build_cache_id('/static/bower_components/bootstrap-css/js/bootstrap.min.js')}"></script>
 </body>
 
 </html>

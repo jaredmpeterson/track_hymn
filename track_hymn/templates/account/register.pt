@@ -1,17 +1,20 @@
 <div metal:use-macro="load: ../layout.pt">
     <div metal:fill-slot="content">
-        <div class="">
+        <div class="container">
             <h2>Create an account</h2>
             <div tal:condition="error">${error}</div>
-            <form action="" method="POST">
-                <input type="text" name="username" required value="${username}" placeholder="Username"><br>
-                <input type="text" name="stake" required value="${stake}" placeholder="Stake"><br>
-                <input type="text" name="ward" required value="${ward}" placeholder="Ward"><br>
-                <input type="text" name="zip" pattern="[0-9]{5}" required value="${zip}" placeholder="ZIP Code"><br>
-                <input type="password" name="password" required value="${password}" placeholder="Password"><br>
-                <input type="password" name="confirm_password" required value="${confirm_password}"
-                       placeholder="confirm password"><br>
-                <button type="submit">Submit</button>
+            <form class="standard-form" method="POST">
+                <input type="text" class="form-control" name="username" required value="${username}"
+                       placeholder="Username"><br>
+                <input type="text" class="form-control" name="stake" required value="${stake}" placeholder="Stake"><br>
+                <input type="text" class="form-control" name="ward" required value="${ward}" placeholder="Ward"><br>
+                <input type="text" class="form-control" name="zip" pattern="[0-9]{5}" required value="${zip}"
+                       placeholder="ZIP Code"><br>
+                <input type="password" class="form-control" name="password" required value="${password}"
+                       placeholder="Password"><br>
+                <input type="password" class="form-control" name="confirm_password" required value="${confirm_password}"
+                       placeholder="Confirm Password"><br>
+                <button type="submit" class="btn btn-success">Create Account</button>
             </form>
         </div>
     </div>

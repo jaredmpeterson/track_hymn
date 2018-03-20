@@ -4,13 +4,17 @@
             <h1>Add Hymns</h1>
             <form class="hymn-form" action="" method="POST">
                 <label for="opening">Opening:</label>
-                <input id="opening" type="number" name="opening" value="${opening}" min="1" max="341"><br>
+                <input id="opening" type="number" name="opening" value="${opening}" min="1" max="341">
+                <br>
                 <label for="sacrament">Sacrament:</label>
-                <input id="sacrament" type="number" name="sacrament" value="${sacrament}" min="1" max="341"><br>
+                <input id="sacrament" type="number" name="sacrament" value="${sacrament}" min="1" max="341">
+                <br>
                 <label for="rest">Rest:</label>
-                <input id="rest" type="number" name="rest" value="${rest}" min="1" max="341"><br>
+                <input id="rest" type="number" name="rest" value="${rest}" min="1" max="341">
+                <br>
                 <label for="closing">Closing:</label>
-                <input id="closing" type="number" name="closing" value="${closing}" min="1" max="341"><br>
+                <input id="closing" type="number" name="closing" value="${closing}" min="1" max="341">
+                <br>
                 <button type="submit">Submit</button>
             </form>
         </div>

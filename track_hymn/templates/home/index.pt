@@ -1,9 +1,13 @@
 <div metal:use-macro="load: ../layout.pt">
     <div metal:fill-slot="content">
 
-        <div class="content">
-            <h1>Home Page</h1>
-            <div>The value from the controller is ${value}.</div>
+        <div class="container">
+            <h1>Track Hymn</h1>
+            <p>Track Hymn is a data driven hobby project to track which songs are sung each week.</p>
+            <p><a class="btn btn-primary btn-lg" href="/account/signin"
+                  role="button" tal:condition=" not view.is_logged_in">Sign In</a></p>
+            <p><a class="btn btn-primary btn-lg" href="/account/register"
+                  role="button" tal:condition="not view.is_logged_in">Register</a></p>
         </div>
 
     </div>
