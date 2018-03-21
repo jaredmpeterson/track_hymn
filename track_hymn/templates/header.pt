@@ -1,5 +1,0 @@
-<div metal:use-macro="load: layout.pt">
-    <div metal:fill-slot="header">
-        <h2>Header Slot</h2>
-    </div>
-</div>
