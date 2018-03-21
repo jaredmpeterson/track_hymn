@@ -14,7 +14,7 @@
                        placeholder="Password"><br>
                 <input type="password" class="form-control" name="confirm_password" required value="${confirm_password}"
                        placeholder="Confirm Password"><br>
-                <button type="submit" class="btn btn-success">Create Account</button>
+                <button type="submit" class="btn btn-success btn-block">Create Account</button>
             </form>
         </div>
     </div>
