@@ -1,11 +1,12 @@
 <div metal:use-macro="load: ../layout.pt">
     <div metal:fill-slot="content">
-        <div class="container">
+        <div class="page-header">
             <h1>Track Hymns</h1>
+        </div>
             <form class="form-horizontal" action="" method="POST">
                 <div class="form-group form-group-lg">
-                    <label class="control-label col-xs-4" for="opening">Opening</label>
-                    <div class="col-xs-8">
+                    <label class="control-label col-xs-3" for="opening">Opening</label>
+                    <div class="col-xs-9">
                         <input id="opening" required class="form-control" type="number" name="opening"
                                value="${opening}"
                                min="1"
@@ -13,8 +14,8 @@
                     </div>
                 </div>
                 <div class="form-group form-group-lg">
-                    <label class="control-label col-xs-4" for="sacrament">Sacrament</label>
-                    <div class="col-xs-8">
+                    <label class="control-label col-xs-3" for="sacrament">Sacrament</label>
+                    <div class="col-xs-9">
                         <input id="sacrament" required class="form-control" type="number" name="sacrament"
                                value="${sacrament}"
                                min="1"
@@ -22,15 +23,15 @@
                     </div>
                 </div>
                 <div class="form-group form-group-lg">
-                    <label class="control-label col-xs-4" for="rest">Rest</label>
-                    <div class="col-xs-8">
+                    <label class="control-label col-xs-3" for="rest">Rest</label>
+                    <div class="col-xs-9">
                         <input id="rest" class="form-control" type="number" name="rest" value="${rest}" min="1"
                                max="341">
                     </div>
                 </div>
                 <div class="form-group form-group-lg">
-                    <label class="control-label col-xs-4" for="closing">Closing</label>
-                    <div class="col-xs-8">
+                    <label class="control-label col-xs-3" for="closing">Closing</label>
+                    <div class="col-xs-9">
                         <input id="closing" required class="form-control" type="number" name="closing"
                                value="${closing}"
                                min="1"
@@ -39,6 +40,5 @@
                 </div>
                 <button type="submit" class="btn btn-default btn-lg btn-block">Submit</button>
             </form>
-        </div>
     </div>
 </div>

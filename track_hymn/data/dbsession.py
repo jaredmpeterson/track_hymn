@@ -2,10 +2,12 @@ from track_hymn.data.modelbase import SABase
 import sqlalchemy
 import sqlalchemy.orm as orm
 
+
+import track_hymn.data.hymn
+import track_hymn.data.record
+import track_hymn.data.stake
 import track_hymn.data.user
 import track_hymn.data.ward
-import track_hymn.data.stake
-import track_hymn.data.hymn
 
 
 class DBSessionFactory:

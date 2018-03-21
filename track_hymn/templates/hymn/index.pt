@@ -2,10 +2,32 @@
     <div metal:fill-slot="content">
 
         <div class="hymns">
-            <h1>Hymns</h1>
-            <div tal:repeat="h hymns">
-                <h2>${h.title}</h2>
+            <div class="page-header">
+                <h1>Hymns</h1>
             </div>
+            <table class="table table-condensed">
+                <thead>
+                <tr>
+                    <th scope="col">Opening</th>
+                    <th scope="col">Sacrament</th>
+                    <th scope="col">Rest</th>
+                    <th scope="col">Closing</th>
+                    <th scope="col">Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr tal:repeat="h hymns">
+                    <td>${h.open}</td>
+                    <td>${h.sacrament}</td>
+                    <td>${h.rest}</td>
+                    <td>${h.close}</td>
+                    <td>
+                        <time datetime="${h.date}">${h.date}</time>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
         </div>
 
     </div>

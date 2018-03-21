@@ -1,14 +1,15 @@
 <div metal:use-macro="load: ../layout.pt">
     <div metal:fill-slot="content">
-
-        <div class="container">
-            <h1>Track Hymn</h1>
-            <p>Track Hymn is a data driven hobby project to track which songs are sung each week.</p>
-            <p><a class="btn btn-primary btn-lg" href="/account/signin"
+        <img src="/static/img/track_hymn.jpeg" alt="Track Hymn" class="img-responsive center-block">
+        <div class="">
+            <div class="page-header">
+                <h1>TRACK HYMNS</h1>
+            </div>
+            <p class="lead">Track Hymn is a data driven hobby project to track which songs are sung each week.</p>
+            <p><a class="btn btn-default btn-lg btn-block" href="/account/signin"
                   role="button" tal:condition=" not view.is_logged_in">Sign In</a></p>
-            <p><a class="btn btn-primary btn-lg" href="/account/register"
+            <p><a class="btn btn-default btn-block btn-lg" href="/account/register"
                   role="button" tal:condition="not view.is_logged_in">Register</a></p>
         </div>
-
     </div>
 </div>

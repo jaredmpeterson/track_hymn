@@ -11,7 +11,7 @@ class AccountController(BaseController):
     @pyramid_handlers.action(renderer='templates/account/index.pt')
     def index(self):
         if not self.auth_user_id:
-            print('Cannot view account page. Must login.')
+            # print('Cannot view account page. Must login.')
             self.redirect('/account/signin')
         return {}
 
@@ -31,7 +31,7 @@ class AccountController(BaseController):
 
         cookie_auth.set_auth(self.request, account.id)
 
-        return self.redirect('/account')
+        return self.redirect('/hymn/add')
 
     @pyramid_handlers.action()
     def logout(self):
@@ -42,7 +42,6 @@ class AccountController(BaseController):
                              request_method='GET',
                              name='register')
     def register(self):
-        print("Calling Register via GET")
         vm = RegisterViewModel()
         return vm.to_dict()
 
@@ -71,4 +70,4 @@ class AccountController(BaseController):
 
         # TODO: redirect
         print("Redirecting")
-        self.redirect('/account')
+        self.redirect('/hymn/add')
