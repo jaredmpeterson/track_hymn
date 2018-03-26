@@ -1,0 +1,15 @@
+deploy_group: deployers
+deploy_user: deployer
+ssh_dir: "/Users/jared/.ssh/"
+ssh_key_name: "id_rsa"
+
+fqdn: "www.olympusmediapartners.com"
+web_serve_dir: "/var/www/html"
+ssl_cert_email: "developer@peteyinc.com"
+
+wsgi_server_port: 6543
+app_name: track_hymn
+app_dir: "/home/{{ deploy_user }}/{{ app_name }}"
+
+venv_dir: "/home/{{ deploy_user }}/venv"
+sub_app_dir: "{{ app_dir }}/15-deployment/blue_yellow_app_deployment"
