@@ -11,5 +11,8 @@ wsgi_server_port: 6543
 app_name: track_hymn
 app_dir: "/home/{{ deploy_user }}/{{ app_name }}"
 
+local_deploy_key_dir: /Users/jared/.ssh
+code_repository: git@github.com:jaredmpeterson/track_hymn.git
+read_only_deploy_key_name: read_only_key
+
 venv_dir: "/home/{{ deploy_user }}/venv"
-sub_app_dir: "{{ app_dir }}/15-deployment/blue_yellow_app_deployment"
