@@ -10,14 +10,47 @@ not have access**
 
 ---
 
-## [5.0.8](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.8)  - 2018-03-01
+## [5.0.10](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.10)  - 2018-04-10
+
+### Added
+* New java brand icon FortAwesome/Font-Awesome#386
+
+### Changed
+* Updating depth of dna icon
+* Updating pied-piper, adding pied-piper-hat
+
+### Fixed
+* Correcting path errors on readme icon FortAwesome/Font-Awesome#12754
+* Light style of lamp icon FortAwesome/Font-Awesome#12725
+
+---
+
+## [5.0.9](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.9)  - 2018-03-27
+
+### Added
+* New Chat icon pack and category
+* New Charity icon pack and category
+* New Moving icon pack and category
+* New icons hands and hand-holding
+
+### Changed
+* Updated flipboard, readme, and houzz brand icon
+* Making all solid icons in the medical icon pack free
+* Updated hand-holding-box and hand-receiving in the Light style
+
+### Fixed
+* Missing box-sizing CSS property for fa-layers-counter
+
+---
+
+## [5.0.8](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.8)  - 2018-03-01
 
 ### Fixed
 * OTF font files missing ligatures for Pro styles FortAwesome/Font-Awesome#12486 FortAwesome/Font-Awesome-Pro#1034
 
 ---
 
-## [5.0.7](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.7)  - 2018-02-26
+## [5.0.7](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.7)  - 2018-02-26
 
 ### Added
 * New Logistics category
@@ -38,7 +71,7 @@ not have access**
 
 ---
 
-## [5.0.6](https://github.com/FortAwesome/Font-Awesome-Pro/releases/tag/5.0.6)  - 2018-01-25
+## [5.0.6](https://github.com/FortAwesome/Font-Awesome/releases/tag/5.0.6)  - 2018-01-25
 
 ### Fixed
 * @fortawesome/fontawesome-pro-light missing submodules

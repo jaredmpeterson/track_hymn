@@ -16,3 +16,8 @@ code_repository: git@github.com:jaredmpeterson/track_hymn.git
 read_only_deploy_key_name: read_only_key
 
 venv_dir: "/home/{{ deploy_user }}/venv"
+
+twilio_account_sid: ACbfa54de693c0fed87bcd4ad232095e2c
+twilio_auth_token: 5d238275c71d26794962960621aeac5d
+twilio_number: "+18019300512"
+alert_number: "+18019300512"

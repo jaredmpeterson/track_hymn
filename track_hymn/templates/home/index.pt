@@ -3,13 +3,14 @@
         <img src="/static/img/track_hymn.jpeg" alt="Track Hymn" class="img-responsive center-block">
         <div class="">
             <div class="page-header">
-                <h1>TRACK HYMNS</h1>
+                <h1 class="text-center">TRACK HYMNS</h1>
             </div>
-            <p class="lead">Track Hymn is a data driven hobby project to track which songs are sung each week.</p>
+            <p class="lead text-center">Track Hymn is a data driven hobby project to track which songs are sung each
+                week.</p>
             <p><a class="btn btn-default btn-lg btn-block" href="/account/signin"
                   role="button" tal:condition=" not view.is_logged_in">Sign In</a></p>
-            <p><a class="btn btn-default btn-block btn-lg" href="/account/register"
-                  role="button" tal:condition="not view.is_logged_in">Register</a></p>
+            <a class="btn btn-default btn-block btn-lg" href="/account/register"
+               role="button" tal:condition="not view.is_logged_in">Register</a>
         </div>
     </div>
 </div>

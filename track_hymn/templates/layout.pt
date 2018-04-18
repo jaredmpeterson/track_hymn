@@ -84,7 +84,8 @@
     <div class="container-fluid">
         <ul class="nav navbar-nav navbar-right">
             <li class="col-xs-6">
-                <a href="https://github.com/jaredmpeterson" class="navbar-link"><i class="fab fa-github"></i> Github</a>
+                <a href="https://github.com/jaredmpeterson/track_hymn" class="navbar-link"><i class="fab fa-github"></i>
+                    Github</a>
             </li>
             <li class="col-xs-6">
                 <a href="https://jaredmpeterson.github.io" class="navbar-link">&copy; Jared M. Peterson</a>
