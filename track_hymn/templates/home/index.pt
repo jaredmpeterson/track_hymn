@@ -3,7 +3,7 @@
         <img src="/static/img/track_hymn.jpeg" alt="Track Hymn" class="img-responsive center-block">
         <div class="">
             <div class="page-header">
-                <h1 class="text-center">TRACK HYMNS</h1>
+                <h1 class="text-center">TRACK HYMN</h1>
             </div>
             <p class="lead text-center">Track Hymn is a data driven hobby project to track which songs are sung each
                 week.</p>

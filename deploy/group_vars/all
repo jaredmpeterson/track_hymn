@@ -3,7 +3,7 @@ deploy_user: deployer
 ssh_dir: "/Users/jared/.ssh/"
 ssh_key_name: "id_rsa"
 
-fqdn: "www.olympusmediapartners.com"
+fqdn: "www.trackhymn.com"
 web_serve_dir: "/var/www/html"
 ssl_cert_email: "developer@peteyinc.com"
 
