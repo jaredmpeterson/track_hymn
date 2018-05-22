@@ -7,10 +7,24 @@
             </div>
             <p class="lead text-center">Track Hymn is a data driven hobby project to track which songs are sung each
                 week.</p>
-            <p><a class="btn btn-default btn-lg btn-block" href="/account/signin"
-                  role="button" tal:condition=" not view.is_logged_in">Sign In</a></p>
-            <a class="btn btn-default btn-block btn-lg" href="/account/register"
+            <div class="container">
+                <div class=".col-xs-12 .col-sm-4 .col-md-4 col-lg-4">
+                </div>
+                <div class=".col-xs-12 .col-sm-4 .col-md-4 col-lg-4" tal:condition="not view.is_logged_in">
+                    <a class="btn btn-default btn-lg btn-block" href="/account/signin"
+                       role="button" tal:condition=" not view.is_logged_in">Sign In</a>
+                    <a class="btn btn-default btn-block btn-lg" href="/account/register"
                role="button" tal:condition="not view.is_logged_in">Register</a>
+                </div>
+                <div class=".col-xs-12 .col-sm-4 .col-md-4 col-lg-4" tal:condition="view.is_logged_in">
+                    <a class="btn btn-default btn-lg btn-block" href="/hymn/add"
+                       role="button" tal:condition="view.is_logged_in">Add</a>
+                    <a class="btn btn-default btn-block btn-lg" href="/account/register"
+                       role="button" tal:condition="not view.is_logged_in">Register</a>
+                </div>
+                <div class=".col-xs-12 .col-sm-4 .col-md-4 col-lg-4">
+                </div>
+            </div>
         </div>
     </div>
 </div>

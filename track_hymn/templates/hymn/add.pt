@@ -38,6 +38,7 @@
                                max="341">
                     </div>
                 </div>
+                <div tal:condition="error" class="alert alert-danger" role="alert">Error: ${error}</div>
                 <button type="submit" class="btn btn-default btn-lg btn-block">Submit</button>
             </form>
     </div>

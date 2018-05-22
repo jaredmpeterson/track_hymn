@@ -17,3 +17,7 @@ class HymnViewModel(ViewModelBase):
 
     def validate(self):
         self.error = None
+
+        if self.opening == self.sacrament or self.opening == self.closing:
+            self.error = "Did you sing the same hymn twice?"
+            return
